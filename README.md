@@ -18,11 +18,11 @@ This version of the bundle requires Symfony 3.4+.
 ### 1. SSH Key
 
 1. IMPORTANT: replace ssh key (each project needs to have his own key)
-1. Generate key without passphrase with `ssh-keygen` in `private/ssh` (replace old ones)
+1. Generate key without passphrase `ssh-keygen -f private/ssh/id_rsa` (overwrite them)
 1. Add generated key in Gitlab with name **"bundle-name"**
 1. Add generated key in ~/.ssh/authorized_key2 on satis.chaplean.coop
 
-## 4. git-flow
+### 4. git-flow
 
 1. Initialize git-flow in repository (cf [Git](https://docs.google.com/document/d/1oBOi_ODucIE0aBGMOnLLTZyzEw0vGT_X1lef0RjJBso/edit))
 1. Update files name for:
@@ -32,7 +32,20 @@ This version of the bundle requires Symfony 3.4+.
 1. Make `docker exec bundle-name_application composer install`
 1. Run `cp vendor/chaplean/coding-standard/hooks/pre-commit .git/hooks/ && chmod +x .git/hooks/pre-commit`
 
-### 5. README.md
+### 5. Configure Coverage
+
+Add coverage parsing expression: (⚙ > CI / CD > General pipelines)
+
+Test coverage parsing : `^\s*Lines:\s*\d+.\d+\%`
+
+Add new integration on gitlab: (⚙ > Integrations)
+
+Pipeline events
+* Url: https://staff.chaplean.coop/gitlab/webhook
+* Secret Token: `lNrZnPyIuHUJ5nI5rWrQFIZVuIFSSA6gMBoHhW3fVQOIE11dIqOztnexINZuOiuFc5XRF0pY6HsOZ5S8cjGzt3WAvZelau0GvFZOCGgzvABZOMKJIkKoQbQuDBPJMdqBzSwiEX5WTI6MOLNORqul0g6myhQvYkEhbBBasEGDLLjKOCYYn8tm3hiRKyHu0UKNMk6T9EuKjK5qainvGCZsAYuAQI0PgTpEFRRpys7PSGZKdibtSO88IhqWdJJFGEpB`
+* SSL verification: enaled
+
+### 6. README.md
 
 Replace the following content with content relative to your bundle.
 
