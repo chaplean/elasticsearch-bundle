@@ -1,17 +1,17 @@
 <?php
 
-namespace Chaplean\Bundle\BundleNameBundle;
+namespace Chaplean\Bundle\ElasticsearchBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
- * Class ChapleanBundleNameBundle.
+ * Class ChapleanElasticsearchBundle.
  *
- * @package   Chaplean\Bundle\BundleNameBundle
+ * @package   Chaplean\Bundle\ElasticsearchBundle
  * @author    Valentin - Chaplean <valentin@chaplean.coop>
  * @copyright 2014 - 2015 Chaplean (https://www.chaplean.coop)
  * @since     1.0.0
  */
-class ChapleanBundleNameBundle extends Bundle
+class ChapleanElasticsearchBundle extends Bundle
 {
 }

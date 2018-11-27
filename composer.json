@@ -1,5 +1,5 @@
 {
-    "name": "chaplean/bundle-name-bundle",
+    "name": "chaplean/elasticsearch-bundle",
     "license": "MIT",
     "type": "symfony-bundle",
     "description": "The Bundle base to fork",
@@ -11,12 +11,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Chaplean\\Bundle\\BundleNameBundle\\": ""
+            "Chaplean\\Bundle\\ElasticsearchBundle\\": ""
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Chaplean\\Bundle\\BundleNameBundle\\": "Tests/"
+            "Tests\\Chaplean\\Bundle\\ElasticsearchBundle\\": "Tests/"
         }
     },
     "repositories": [
@@ -27,6 +27,7 @@
     ],
     "require": {
         "php": ">=7.1",
+        "elasticsearch/elasticsearch": "^6.0",
         "symfony/config": "^3.0 || ^4.0",
         "symfony/console": "^3.0 || ^4.0",
         "symfony/dependency-injection": "^3.0 || ^4.0",
