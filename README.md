@@ -41,14 +41,8 @@ class AppKernel extends Kernel
 
 ## 3. config.yml
 
-##### A. Import
-
-```yaml
-    - { resource: '@ChapleanElasticsearchBundle/Resources/config/config.yml' }
-```
-
-##### B. Configuration
-
 ```
 chaplean_elasticsearch:
+    indexes:
+        <key>: <index_name>
 ```
